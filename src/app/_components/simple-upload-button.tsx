@@ -88,6 +88,11 @@ export default function SimpleUploadButton() {
         },
       );
     },
+    onUploadError(error) {
+      posthog.capture("upload error", { error });
+      toast.error("Upload failed");
+      toast.dismiss("upload-begin");
+    },
     onClientUploadComplete(_) {
       toast.dismiss("upload-begin");
       toast("Upload complete!");
