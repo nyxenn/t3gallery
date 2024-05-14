@@ -5,5 +5,9 @@ export default function FullPagePhoto({
 }: {
   params: { id: number };
 }) {
-  return <FullPageImageView id={photoId} />;
+  return (
+    <div className="h-full">
+      <FullPageImageView id={photoId} />
+    </div>
+  );
 }
