@@ -1,7 +1,9 @@
-export default function PhotoModal({
+import FullPageImageView from "~/components/full-image-page";
+
+export default function FullPagePhoto({
   params: { id: photoId },
 }: {
-  params: { id: string };
+  params: { id: number };
 }) {
-  return <div>{photoId}</div>;
+  return <FullPageImageView id={photoId} />;
 }
